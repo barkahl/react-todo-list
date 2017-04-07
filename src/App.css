@@ -1,0 +1,16 @@
+ul {
+  list-style: none;
+}
+
+.item-id {
+  margin: 0 10px;
+  color: #c8c8c8;
+}
+
+.item-done {
+    opacity: .4;
+}
+
+input, button {
+    margin: 4px;
+}
