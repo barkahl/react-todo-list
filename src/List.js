@@ -3,18 +3,13 @@ import Item from './Item';
 
 class List extends React.Component {
     render() {
-        let items = [];
-
-        this.props.items.map(item => {
-            if (item.name.includes(this.props.filterQuery)) {
-                items.push(item);
-            }
-            return item;
-        });
+        const items = this.props.items
+            .filter(item => item.name.includes(this.props.filterQuery))
+            .map(item => <Item key={item.id} item={item} handleDoneItem={this.props.handleDoneItem} />);
 
         return (
             <ul>
-                {items.map(item => <Item key={item.id} item={item} handleDoneItem={this.props.handleDoneItem} />)}
+                {items}
             </ul>
         );
     };

@@ -8,6 +8,9 @@ class Form extends React.Component {
 
         this.handleButtonClick = this.handleButtonClick.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
+
+        // refs
+        this.input = null;
     }
 
     handleButtonClick() {

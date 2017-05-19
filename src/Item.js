@@ -14,14 +14,9 @@ class Item extends React.Component {
     }
 
     render() {
-        const checkbox = this.props.item.done ?
-            <input type="checkbox" disabled onChange={this.handleCheckboxChange} /> :
-            <input type="checkbox" onChange={this.handleCheckboxChange} />
-        ;
-
         return (
             <li className={this.props.item.done ? 'item-done' : ''}>
-                {checkbox}
+                <input type="checkbox" disabled={this.props.item.done} onChange={this.handleCheckboxChange} />
                 <span className="item-id">{this.props.item.id}</span>
                 <span className="item-name">{this.props.item.name}</span>
             </li>

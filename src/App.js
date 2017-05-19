@@ -20,36 +20,24 @@ class App extends React.Component {
     }
 
     handleNewItem(name) {
-        this.state.items.unshift({
-            id: this.state.items.length + 1,
-            name: name,
-            done: false
-        });
-
         this.setState({
-            items: this.state.items
+            items: [{
+                id: this.state.items.length + 1,
+                name,
+                done: false
+            }, ...this.state.items]
         });
-    }
-
-    findItemById(id) {
-        for (let i = 0; i < this.state.items.length; i++) {
-            if (this.state.items[i].id === id) {
-                return this.state.items[i];
-            }
-        }
     }
 
     handleDoneItem(id) {
-        let item = this.findItemById(id);
-        let index = this.state.items.indexOf(item);
-
-        this.state.items.splice(index, 1);
-
-        item.done = true;
-        this.state.items.push(item);
-
         this.setState({
-            items: this.state.items
+            items: this.state.items.map(item => {
+                if (item.id === id) {
+                    item.done = true;
+                }
+
+                return item;
+            })
         });
     }
 
