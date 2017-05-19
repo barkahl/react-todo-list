@@ -7,6 +7,7 @@ install:
 
 deploy:
     provider: heroku
+    skip_cleanup: true
     app: react-todo-list-app
     api_key:
         secure: "Gj2eSgRP16nwe24ly7s+svtjObM+aUtP796qm7gopNb08uuJ4lJ4HYYwlvA2gBvAoY4bB0CwnDdU+m5FloUu1GgRURvo0WlYEjKFha3PmhfDT2C+dKn8hR9/qnTJc6e7nWkXCR3AdbUkxB5VfqQB66aU1SX5fWbzYqc0P0sG0LmrgjeWNnt5li9AiD8xrenP5/MdNdi7CgAGL8YgsageUEBNBN2wezQ1FnRkrzWqaBdBD5NG1/ASnGWJNdcD6uXvAur4AGVNYBpICU6dTcBkmL+u6ex/tmenAdlkOqeTf+05/5mhplnZ7QUr9pZKYY5H8Y6sOU2g6Y3Y7tdF+ZV58KSMkBlVrbj/b0KvzBmb2YjHJmA1aaSX1ciIPKGC5pMKGsDD3kYZ9QSYAe0BtLUSvwIbcXEaATTnLjReeHpS21xw71SMrUY4kjBN/fb/+XQioLkiZp3ksmDMGv1sK5NiyTo/KqSdTXD2kZ7Xaqaca8iSL0frlZpx4Xhp9aYMcvzwdglkuMt5uNCy5i9NIYpiIu3RCCe3SmP6tMC8sZE7qmQswsVs5RGFeV468IRxUOZWZ6OaZ1cowwN3u34OxLzlfT7K+ZV2+0b3+eXHi+aBW+JNQInTptdc9qK+yZvDbON72+DuU+OoSuTWUuJeySBUtlm3UhYlIKofCnU2MUpdHUA="
